@@ -19,5 +19,13 @@ app.use(cookieParser())
 app.use(helmet());
 app.use(helmet.crossOriginResourcePolicy({ policy: "cross-origin" }));
 
+// ROUTE IMPORTS
+
+import userRouter from "./routes/user.route.js"
+
+// API ROUTES
+
+app.use("/api/v1/users", userRouter);
+
 
 export { app }
